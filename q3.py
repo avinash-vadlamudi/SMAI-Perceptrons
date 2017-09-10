@@ -129,10 +129,10 @@ def qvaltrain(flag,index,x_train,y_train,cnt_train,itcnt):
         return [ans,0]
 
 
-f = [1,1,0,1,0,0,0,0,0]
+f = [1,1,1,1,1,0,0,0,0]
 f_check = [0,0,0,0,0,0,0,0,0]
 vals_f =  [0,0,0,0,0,0,0,0,0]
-itc = [2,2,20,2,15,2,2,10,3]
+itc = [2,2,2,2,2,2,2,10,3]
 flag_stop=1
 cnt_comp=0
 root = Node(x_train,y_train,cnt_train)

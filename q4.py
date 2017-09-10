@@ -11,6 +11,8 @@ a part of the first assignment. Understand the code well"""
 
 classes = ['galsworthy/','galsworthy_2/','mill/','shelley/','thackerey/','thackerey_2/','wordsmith_prose/','cia/','johnfranklinjameson/','diplomaticcorr/']
 
+classes_output = ['galsworthy','galsworthy_2','mill','shelley','thackerey','thackerey_2','wordsmith_prose','cia','johnfranklinjameson','diplomaticcorr']
+
 class FeatureVector(object):
     def __init__(self,vocabsize,numdata):
         self.vocabsize = vocabsize
@@ -28,7 +30,7 @@ class KNN(object):
         self.Y_test = testVec.Y
         self.metric = Metrics('accuracy')
 
-    def classify(self, nn=3):
+    def classify(self, nn=1):
         y_pred = [0]*self.Y_test.shape[0]
         for i in range(self.Y_test.shape[0]):
             Y_pred = classes[np.random.randint(0,10)]
@@ -43,7 +45,7 @@ class KNN(object):
                 f[val]=f[val]+1
             indx = f.index(max(f))
             y_pred[j]=indx
-            print classes[y_pred[j]]
+            print classes_output[y_pred[j]]
         #for i in range(self.Y_test.shape[0]):
         #    Y_pred[i] = classes[y_pred[i]]
         #print Y_pred
