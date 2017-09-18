@@ -38,6 +38,8 @@ def algo1(x_train,y_train,w,cnt_train):
     while(flag):
         it=it+1
         #print(it)
+        if it>2500:
+            break
         flag=0
         for i in range(0,cnt_train):
             w2 = w
@@ -58,6 +60,8 @@ def algo2(x_train,y_train,w,cnt_train):
     while(flag):
         it = it+1
         #print(it)
+        if it>2500:
+            break
         flag = 0
         for i in range(0,cnt_train):
             w2 = w
@@ -79,6 +83,8 @@ def algo3(x_train,y_train,w,cnt_train):
         change = np.zeros(28*28+1)
         it = it+1
         flag = 0
+        if it>2500:
+            break
         #print(it)
         for i in range(0,cnt_train):
             w2 = w
@@ -104,6 +110,8 @@ def algo4(x_train,y_train,w,cnt_train):
         it = it+1
         flag = 0
         #print(it)
+        if it>2500:
+            break
         for i in range(0,cnt_train):
             w2 = w
             np.transpose(w2)
