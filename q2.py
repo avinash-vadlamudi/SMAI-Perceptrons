@@ -14,7 +14,7 @@ def prediction(x_test,y_test,w,cnt_test):
             yn[i]=2
         else:
             yn[i]=4
-        print yn[i]
+        print int(yn[i])
     return [yn]
 
 def print_val(yn,y_test,cnt_test):
