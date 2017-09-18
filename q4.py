@@ -30,7 +30,7 @@ class KNN(object):
         self.Y_test = testVec.Y
         self.metric = Metrics('accuracy')
 
-    def classify(self, nn=1):
+    def classify(self, nn=3):
         y_pred = [0]*self.Y_test.shape[0]
         for i in range(self.Y_test.shape[0]):
             Y_pred = classes[np.random.randint(0,10)]
@@ -44,8 +44,8 @@ class KNN(object):
                 val = self.Y_train[val]
                 f[val]=f[val]+1
             indx = f.index(max(f))
-            y_pred[j]=indx
-            print classes_output[y_pred[j]]
+            y_pred[i]=indx
+            print classes_output[y_pred[i]]
         #for i in range(self.Y_test.shape[0]):
         #    Y_pred[i] = classes[y_pred[i]]
         #print Y_pred
